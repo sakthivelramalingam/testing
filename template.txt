@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+      {
+	            "apiVersion": "2018-08-01",
+                "name": "vnet1Template",
+                "type": "Microsoft.Resources/deployments",
+				"properties": {
+				      "mode": "Incremental",
+					  "templateLink": {
+					     "uri":"https://sakthitoage1.blob.core.windows.net/containner/VNet3.json",
+				 }
+			  }
+		},
+		
+		 {
+		        "apiVersion": "2018-08-01",
+                "name": "vnet2Template",
+                "type": "Microsoft.Resources/deployments",
+				"properties": {
+			    "mode": "Incremental",
+			    "templateLink": {
+					     "uri":"https://sakthitoage1.blob.core.windows.net/containner/VNet4.json",
+				 }
+		
+			  }	
+         },
+        
+          { 
+                "apiVersion": "2018-08-01",
+                "name": "vnet3Template",
+                "type": "Microsoft.Resources/deployments",
+				"properties": {
+				      "mode": "Incremental",
+					  "templateLink": {
+					     "uri":"https://sakthitoage1.blob.core.windows.net/containner/VNet5.json",
+				 }
+              }
+          }			  
+			 
+  
+  ]
+}
